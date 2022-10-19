@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -88,7 +89,15 @@ namespace QuickSort
                 swap(i, j);
                 mov_count++;
             }
-        }
-        //j now contains the index of the last element in the sorted list
-        if (low < j)
-        {
+
+            //j now contains the index of the last element in the sorted list
+            if (low < j)
+            {
+                //Move the pivot to its correct position in the list
+                swap(low, j);
+                mov_count++;
+            }
+            //sort the list on the left of pivot using quick start
+            q_sort(low, j - 1);
+
+ 
