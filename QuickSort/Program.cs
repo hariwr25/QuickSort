@@ -7,9 +7,3 @@ using System.Threading.Tasks;
 namespace QuickSort
 {
     class Program
-    {
-        static void Main(string[] args)
-        {
-        }
-    }
-}
