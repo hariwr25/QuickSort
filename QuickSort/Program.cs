@@ -105,9 +105,9 @@ namespace QuickSort
         }
         void display()
         {
-            Console.WriteLine("\n----------------------");
-            Console.WriteLine("\ Sorted array elements ");
-            Console.WriteLine("------------------------");
+            Console.WriteLine("\n--------------------");
+            Console.WriteLine("Sorted array elements ");
+            Console.WriteLine("\n---------------------");
 
             for (int j = 0; j < n; j++)
             {
@@ -120,6 +120,20 @@ namespace QuickSort
         {
             return (n);
         }
-
+        static void Main(string[] args)
+        {
+            //Declaring the object of the class
+            Program mylist = new Program();
+            //Accept array elements
+            mylist.input();
+            //Calling the sorting function
+            //frist call to quick sort algorithm
+            mylist.q_sort(0, mylist.getSize() - 1);
+            //Display sorted array
+            mylist.display();
+            // to exit from the console
+            Console.WriteLine("\n\nProses Enter to exit.");
+            Console.Read();
         }
- 
+    }
+}
